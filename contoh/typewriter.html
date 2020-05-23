@@ -1,0 +1,106 @@
+<html lang="en" class="full-height">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Hello World</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="mask flex-center">
+      <div class="container">
+        <section id="text1">
+          <h1 class="font-weight-bold text-center"></h1>
+        </section>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://use.fontawesome.com/releases/v5.8.2/js/all.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://assets.azalelnation.com/font-awesome/js/all.min.js"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var dataText = [
+          "SELAMAT HARI RAYA IDUL FITRI 1441H",
+          "MOHON MAAF LAHIR DAN BATIN",
+          " :) "
+        ];
+
+        function typeWriter(text, i, fnCallback) {
+          if (i < text.length) {
+            document.querySelector("#text1 h1").innerHTML =
+              "<b>" + text.substring(0, i + 1);
+            +"</b>";
+
+            setTimeout(function() {
+              typeWriter(text, i + 1, fnCallback);
+            }, 200);
+          } else if (typeof fnCallback == "function") {
+            setTimeout(fnCallback, 1000);
+          }
+        }
+
+        function StartTextAnimation(i) {
+          if (typeof dataText[i] == "undefined") {
+            setTimeout(function() {
+              StartTextAnimation(0);
+            }, 0);
+          }
+
+          if (dataText[i]) {
+            if (i < dataText[i].length) {
+              typeWriter(dataText[i], 0, function() {
+                StartTextAnimation(i + 1);
+              });
+            }
+          }
+        }
+        // start the text animation
+        StartTextAnimation(0);
+      });
+    </script>
+  </body>
+</html>
