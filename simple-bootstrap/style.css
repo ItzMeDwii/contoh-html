@@ -1,0 +1,72 @@
+body {
+  font-family: Roboto, sans-serif !important;
+  text-align: center;
+}
+
+.nav,
+.page-footer {
+  background: #2e2e2e;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.main {
+  background: #212121;
+  min-height: 100vh;
+}
+
+.center {
+  min-height: 100vh;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.banner {
+  max-width: 100%;
+}
+
+.btn {
+    background: rgba(255, 255, 255, 0.3)
+}
+
+.btt {
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.btt.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 0;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #2e2e2e;
+  border-radius: 10px;
+  border-radius: 0 !important;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: 0;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0 !important;
+}
